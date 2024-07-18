@@ -1,0 +1,314 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+/* main {
+  min-height: 250vh;
+} */
+.container {
+  width: 95%;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.col {
+  width: calc(100% / 3);
+}
+/* Navbar Css */
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* align-items: center; */
+  padding: 0 2vw;
+  /* border: 2px solid red; */
+}
+nav .nav-icon {
+  /* border: 2px solid blue; */
+  width: 6%;
+  display: flex;
+}
+nav .nav-icon img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+nav .nav-menu {
+  /* border: 2px solid blue; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3vw;
+  font-size: 1.5vw;
+  cursor: pointer;
+}
+nav .nav-social-icon {
+  /* border: 2px solid blue; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5vw;
+  font-size: 1.3vw;
+}
+nav .nav-social-icon div {
+  display: flex;
+  border: 1px solid #050505b3;
+  padding: 0.1vw 0.2vw;
+  border-radius: 50%;
+}
+nav .nav-ham-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  display: none;
+}
+/* Navbar Css */
+
+/* Hero Section */
+
+.hero-section {
+  /* border: 2px solid red; */
+  position: relative;
+}
+.hero-section .hero-section-img {
+  display: flex;
+}
+.hero-section .hero-section-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.hero-section button {
+  padding: 0.75vw 9vw;
+  font-size: 2.5vw;
+  color: #fff;
+  background-image: linear-gradient(to right, #050505, #6e6e6e);
+  position: absolute;
+  bottom: 7%;
+  left: 3%;
+  border: none;
+}
+
+/* Hero Section */
+
+/* Content Section */
+
+.content-section {
+  background-color: #b2b2b2;
+}
+
+.content-section .content {
+  /* border: 1px solid red; */
+  font-size: 1.1vw;
+  text-align: center;
+  margin: 2vw 3vw;
+  padding: 1vw 2vw;
+}
+
+/* Content Section */
+
+/* Card Section */
+.card-section {
+  /* border: 2px solid red; */
+  min-height: 90vh;
+  margin-top: 1vw;
+}
+.card-section h1 {
+  /* border: 2px solid red; */
+  font-size: 3vw;
+  margin-top: 5vw;
+  margin-bottom: 1vw;
+  padding-left: 2vw;
+}
+
+.card-section .card-box {
+  /* border: 2px solid red; */
+  padding: 2vw;
+}
+.card-section .card-two {
+  text-align: center;
+}
+.card-section .card-three {
+  text-align: right;
+}
+.card-section img {
+  max-width: 100%;
+}
+.card-section .card-box h4 {
+  margin: 1vw 0;
+  font-size: 1.5vw;
+}
+.card-section .card-box p {
+  margin-bottom: 1vw;
+  font-weight: 400;
+  font-size: 1vw;
+}
+.card-section .card-box button {
+  background-color: #000;
+  color: #fff;
+  padding: 0.7vw 2vw;
+  border: none;
+  font-size: 1vw;
+}
+
+/* Card Section */
+
+@media (max-width: 1440px) {
+  .hero-section button {
+    padding: 0.84vw 9vw;
+  }
+  .content-section .content {
+    /* border: 1px solid red; */
+    font-size: 1.25vw;
+    margin: 1vw 2vw;
+    padding: 1vw 2vw;
+  }
+  .card-section .card-box p {
+    margin-bottom: 1.5vw;
+    font-size: 1.2vw;
+  }
+  .card-section .card-box button {
+    font-size: 1.2vw;
+  }
+}
+@media (max-width: 1100px) {
+  nav .nav-social-icon div {
+    padding: 0.3vw 0.32vw;
+  }
+  .hero-section button {
+    padding: 1vw 9vw;
+  }
+  .content-section .content {
+    /* border: 1px solid red; */
+    font-size: 1.25vw;
+    margin: 1vw 2vw;
+    padding: 1vw 2vw;
+  }
+  .card-section .card-box p {
+    margin-bottom: 1.7vw;
+    font-size: 1.25vw;
+  }
+  .card-section .card-box button {
+    font-size: 1.25vw;
+  }
+}
+@media (max-width: 800px) {
+  nav .nav-icon {
+    width: 8%;
+  }
+  nav .nav-menu {
+    font-size: 1.8vw;
+  }
+  nav .nav-social-icon {
+    gap: 0.5vw;
+    font-size: 1.8vw;
+  }
+  nav .nav-social-icon div {
+    padding: 0.2vw 0.3vw;
+  }
+  .hero-section button {
+    padding: 1.3vw 9vw;
+  }
+  .content-section .content {
+    /* border: 1px solid red; */
+    font-size: 1.5vw;
+    margin: 1vw 2vw;
+    padding: 1vw 2vw;
+  }
+  .card-section .card-box h4 {
+    font-size: 1.7vw;
+  }
+  .card-section .card-box p {
+    margin-bottom: 1.7vw;
+    font-size: 1.5vw;
+  }
+  .card-section .card-box button {
+    font-size: 1.5vw;
+    padding: 1vw 2vw;
+  }
+}
+@media (max-width: 700px) {
+  .hero-section button {
+    padding: 1.5vw 7.5vw;
+    font-size: 3vw;
+  }
+}
+@media (max-width: 500px) {
+  nav {
+    padding: 0 4vw;
+  }
+  nav .nav-icon {
+    /* border: 2px solid red; */
+    width: 15%;
+  }
+  nav .nav-menu {
+    display: none;
+  }
+  nav .nav-social-icon {
+    display: none;
+  }
+  nav .nav-ham-icon {
+    /* border: 2px solid red; */
+    margin-right: 2vw;
+    display: flex;
+    font-size: 6vw;
+  }
+  .hero-section button {
+    padding: 1.8vw 7.5vw;
+    font-size: 3vw;
+  }
+  .content-section .row {
+    flex-direction: column;
+    padding: 2vw 0;
+  }
+  .content-section .col {
+    width: 100%;
+  }
+  .content-section .content {
+    /* border: 1px solid red; */
+    width: 80%;
+    margin: 2vw auto;
+    font-size: 3vw;
+    padding: 1vw 2vw;
+    text-align: justify;
+  }
+  .card-section h1 {
+    font-size: 5vw;
+    margin-bottom: 5vw;
+    margin-top: 8vw;
+  }
+  .card-section .col {
+    width: 100%;
+  }
+  .card-section .card-box h4 {
+    font-size: 3.5vw;
+    margin-bottom: 2vw;
+  }
+  .card-section .card-box p {
+    margin-bottom: 3vw;
+    font-size: 3vw;
+  }
+  .card-section .card-box button {
+    font-size: 3vw;
+    padding: 2vw 4vw;
+  }
+}
+@media (max-width: 400px) {
+  .content-section .content {
+    margin: 2vw auto;
+    font-size: 3vw;
+    padding: 1vw 2vw;
+  }
+}
