@@ -14,6 +14,10 @@ body {
 /* main {
   min-height: 250vh;
 } */
+a {
+  text-decoration: none;
+  color: #000;
+}
 .container {
   width: 95%;
   margin: auto;
@@ -29,11 +33,13 @@ body {
 /* Navbar Css */
 
 nav {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   /* align-items: center; */
   padding: 0 2vw;
+  z-index: 999;
   /* border: 2px solid red; */
 }
 nav .nav-icon {
@@ -54,6 +60,7 @@ nav .nav-menu {
   gap: 3vw;
   font-size: 1.5vw;
   cursor: pointer;
+  font-weight: 600;
 }
 nav .nav-social-icon {
   /* border: 2px solid blue; */
@@ -63,7 +70,7 @@ nav .nav-social-icon {
   gap: 0.5vw;
   font-size: 1.3vw;
 }
-nav .nav-social-icon div {
+nav .nav-social-icon div a {
   display: flex;
   border: 1px solid #050505b3;
   padding: 0.1vw 0.2vw;
@@ -74,6 +81,34 @@ nav .nav-ham-icon {
   flex-direction: row;
   align-items: center;
   display: none;
+}
+nav .check-box {
+  display: none;
+}
+nav .nav-ham-menu {
+  display: none;
+  width: 100%;
+  position: absolute;
+  background-color: #fff;
+  top: 100%;
+  left: 0;
+  z-index: 999;
+  font-size: 3vw;
+  padding: 2vw 4vw;
+  opacity: 0.8;
+}
+nav .nav-ham-menu > a {
+  display: block;
+  font-weight: 500;
+  color: #ba1a59;
+  margin: 3.2vw 0;
+  font-size: 3.5vw;
+}
+nav .nav-ham-menu div {
+  margin: 3.2vw 0;
+}
+nav .icon {
+  font-size: 3.5vw;
 }
 /* Navbar Css */
 
@@ -185,8 +220,8 @@ nav .nav-ham-icon {
   }
 }
 @media (max-width: 1100px) {
-  nav .nav-social-icon div {
-    padding: 0.3vw 0.32vw;
+  nav .nav-social-icon div a {
+    padding: 0.3vw 0.3vw;
   }
   .hero-section button {
     padding: 1vw 9vw;
@@ -216,8 +251,8 @@ nav .nav-ham-icon {
     gap: 0.5vw;
     font-size: 1.8vw;
   }
-  nav .nav-social-icon div {
-    padding: 0.2vw 0.3vw;
+  nav .nav-social-icon div a {
+    padding: 0.2vw 0.32vw;
   }
   .hero-section button {
     padding: 1.3vw 9vw;
@@ -266,6 +301,23 @@ nav .nav-ham-icon {
     display: flex;
     font-size: 6vw;
   }
+  nav .nav-ham-menu {
+    display: block;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+  }
+  nav .nav-ham-menu a {
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+  }
+  nav .check-box:checked ~ div {
+    transform: scale(1, 1);
+  }
+  nav .check-box:checked ~ div a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+  }
   .hero-section button {
     padding: 1.8vw 7.5vw;
     font-size: 3vw;
@@ -310,6 +362,12 @@ nav .nav-ham-icon {
   }
 }
 @media (max-width: 400px) {
+  nav .nav-ham-menu > a {
+    font-size: 4vw;
+  }
+  nav .icon {
+    font-size: 4vw;
+  }
   .content-section .content {
     margin: 2vw auto;
     font-size: 3vw;
