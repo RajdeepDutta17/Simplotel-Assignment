@@ -289,6 +289,9 @@ nav .nav-ham-icon {
     margin-bottom: 5vw;
     margin-top: 8vw;
   }
+  .card-section .row {
+    gap: 1.5vw;
+  }
   .card-section .col {
     width: 100%;
   }
